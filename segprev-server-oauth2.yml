@@ -24,14 +24,15 @@ security:
             scope: read,write,trust
 
 spring:
-    datasource:
-        driver-class-name: org.apache.derby.jdbc.EmbeddedDriver
-        password: hiro
-        url: jdbc:derby:D:\Java\BancoDados\oauth2-segprev
-        username: hiro
+#    datasource:
+#        driver-class-name: org.apache.derby.jdbc.EmbeddedDriver
+#        password: hiro
+#        url: jdbc:derby:D:\Java\BancoDados\oauth2-segprev
+#        username: hiro
     jpa:
-        database-platform: org.hibernate.dialect.DerbyDialect
+#        database-platform: 
         generate-ddl: false
         hibernate:
+            dialect: org.hibernate.dialect.DerbyTenSevenDialect
             ddl-auto: none
         show-sql: true
