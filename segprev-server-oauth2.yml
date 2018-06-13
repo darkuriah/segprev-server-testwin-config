@@ -17,11 +17,11 @@ security:
     oauth2:
         client:
             access-token-validity-seconds: 1800
-            authorized-grant-types: password,refresh_token
+            authorized-grant-types: password,refresh_token,authorization_code
             client-id: segprev
-            client-secret: $2a$10$OlzfgSsqtyWbCbKIoznWp.oS7aI3JLwrs63J2hknKJxezHDo90yqa
+            client-secret: password
             resource-ids: resources
-            scope: read,write
+            scope: read,write,trust
 
 spring:
     datasource:
@@ -36,4 +36,3 @@ spring:
         hibernate:
             ddl-auto: none
         show-sql: true
-        open-in-view: false
