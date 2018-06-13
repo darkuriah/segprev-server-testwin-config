@@ -31,8 +31,7 @@ spring:
         url: jdbc:derby://localhost:1527/oauth2-segprev
         username: hiro
     jpa:
-        database-platform: org.hibernate.dialect.DerbyTenSevenDialect
-        generate-ddl: false
         hibernate:
             ddl-auto: none
+            dialect: org.hibernate.dialect.DerbyDialect
         show-sql: true
