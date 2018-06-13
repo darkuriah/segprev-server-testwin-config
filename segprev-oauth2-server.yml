@@ -13,16 +13,6 @@ eureka:
     server:
         wait-time-in-ms-when-sync-empty: 3000
 
-#security:
-#    oauth2:
-#        client:
-#            access-token-validity-seconds: 1800
-#            authorized-grant-types: password,refresh_token
-#            client-id: segprev
-#            client-secret: secret
-#            resource-ids: resources
-#            scope: read,write
-
 security:
     oauth2:
         client:
