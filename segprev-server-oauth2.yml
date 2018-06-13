@@ -27,7 +27,6 @@ spring:
     datasource:
         driver-class-name: org.apache.derby.jdbc.EmbeddedDriver
         password: hiro
-        platform: derby
         url: jdbc:derby:D:\Java\BancoDados\oauth2-segprev
         username: hiro
     jpa:
