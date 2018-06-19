@@ -16,21 +16,39 @@ eureka:
 security:
     oauth2:
         client:
-            access-token-validity-seconds: 1800
-            authorized-grant-types: password,refresh_token
-            client-id: segprev
-            client-secret: $2a$10$SLXAYmuPqZhmqsyTPpn2MOB14XWbQ4JMZ4thyQvwvg9N.stf4x8yC
-            resource-ids: resources
+            client-id: acme
+            client-secret: acmesecret
             scope: read,write
+            auto-approve-scopes: '.*'
 
+facebook:
+    client:
+        clientId: 233668646673605
+        clientSecret: 33b17e044ee6a4fa383f46ec6e28ea1d
+        accessTokenUri: https://graph.facebook.com/oauth/access_token
+        userAuthorizationUri: https://www.facebook.com/dialog/oauth
+        tokenName: oauth_token
+        authenticationScheme: query
+        clientAuthenticationScheme: form
+    resource:
+        userInfoUri: https://graph.facebook.com/me
+        
+github:
+    client:
+        clientId: 35381f654ae9ee8b2663
+        clientSecret: 96637365c880d6015e8414d8778b324ed10fa048
+        accessTokenUri: https://github.com/login/oauth/access_token
+        userAuthorizationUri: https://github.com/login/oauth/authorize
+        clientAuthenticationScheme: form
+    resource:
+        userInfoUri: https://api.github.com/user
+        
 spring:
     datasource:
         url: jdbc:derby://localhost:1527/oauth2-segprev
         username: hiro
         password: hiro
         driver-class-name: org.apache.derby.jdbc.ClientDriver
-        schema: classpath:/sql/ddl-Derby.sql
-        data: classpath:/sql/dml-Derby.sql
     jpa:
         show-sql: true
         open-in-view: false
